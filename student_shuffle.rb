@@ -20,20 +20,27 @@ count = 0
 num_students = students.length 
 
 until count == num_students
+	
+	if num_students == 1
+		puts "#{students[count]} is flying solo today."
+		count +=1
+	
+	else
+		
+		if num_students % 2 == 1
 
-	if num_students % 2 == 1
-
-		if count < num_students - 3
+			if count < num_students - 3
 		puts "#{students[count]} & #{students[count + 1]}"
-		else
+			else
 		puts "#{students[count]}, #{students[count+1]}, & #{students[count+2]}"
-		break
-		end
+				break
+			end
 
-else 
+		else 
 	puts "#{students[count]} & #{students[count+1]}"
 end 
 
-	count += 2
-
+count += 2
 end
+
+end 
